@@ -1,15 +1,11 @@
 package DrawHelpers;
 
 import java.awt.*;
-
-import javax.swing.JPanel;
-import javax.swing.JLabel;
-
-import java.awt.event.MouseEvent;
 import java.awt.event.MouseAdapter;
-import java.awt.image.BufferedImage;
-
+import java.awt.event.MouseEvent;
 import java.util.ArrayList;
+
+import javax.swing.*;
 
 import Shapes.MyLine;
 import Shapes.MyOval;
@@ -45,10 +41,6 @@ public class DrawPanel extends JPanel
         currentShapeFilled=false;
 
         this.statusLabel = statusLabel; //Initialize statusLabel
-
-        //setLayout(new BorderLayout());
-        //setBackground( Color.WHITE );
-        //add( statusLabel, BorderLayout.SOUTH );
 
         // handles mouse motion, events
         MouseHandler handler = new MouseHandler();
@@ -169,7 +161,7 @@ public class DrawPanel extends JPanel
         //Trace the position of mouse movements
         public void mouseMoved( MouseEvent event )
         {
-            statusLabel.setText(String.format("Mouse Coordinates X: %d Y: %d",event.getX(),event.getY()));
+
         }
 
         //Trace the mouse position and set status
@@ -180,14 +172,13 @@ public class DrawPanel extends JPanel
             currentShapeObject.setY2(event.getY());
 
             //set current mouse position
-            statusLabel.setText(String.format("Mouse Coordinates X: %d Y: %d",event.getX(),event.getY()));
 
             repaint();
 
-        } // end mouseDragged
+        }
 
-    }// end MouseHandler
+    }
 
 
 
-} // end class
+}
