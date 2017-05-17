@@ -22,24 +22,24 @@ public class MyPaintApplication {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 
-        MyJFrame testPaintForm = new MyJFrame();
-        
-       testPaintForm.setTitle("");
-           
-       testPaintForm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            
-       testPaintForm.setPreferredSize(new Dimension((int)screenSize.getWidth(), (int)screenSize.getHeight()));
-       
-       testPaintForm.getContentPane().setBackground( Color.LIGHT_GRAY);
-     
-       testPaintForm.pack();
-            
-       testPaintForm.setLocationRelativeTo(null);
-          
-       testPaintForm.setVisible(true);
+        MyJFrame MyPaintForm = new MyJFrame();
+
+        MyPaintForm.setTitle("Easy PaintPro");
+
+        MyPaintForm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        MyPaintForm.setPreferredSize(new Dimension(1320, 850));
+
+        MyPaintForm.getContentPane().setBackground( Color.LIGHT_GRAY);
+
+        MyPaintForm.pack();
+
+        MyPaintForm.setLocationRelativeTo(null);
+
+        MyPaintForm.setVisible(true);
     }
-    
+
 }
